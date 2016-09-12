@@ -1,0 +1,428 @@
+﻿@model FireStorm.Models.DealerDetailDO
+
+@{
+    ViewBag.Title = "GetDealerDetail";
+}
+
+<div class="col-sm-10">
+    <h2>Dealer Detail</h2>
+
+    <table class="table">
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Account)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Account)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.AffiliateSponsoringDealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.AffiliateSponsoringDealerID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.APDealershipNumber)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.APDealershipNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.APLineage)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.APLineage)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.APPlacementDealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.APPlacementDealerID)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CurrencyTypeID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CurrencyTypeID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CustomerStatusID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CustomerStatusID)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CustomerTypeID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CustomerTypeID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DateEmailPrimaryLastValidated)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DateEmailPrimaryLastValidated)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DateExported)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DateExported)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DealerStatusCodeID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DealerStatusCodeID)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DEFSponsorDealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DEFSponsorDealerID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DEFSponsorDealershipNumber)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DEFSponsorDealershipNumber)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.EnrollDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EnrollDate)
+                </div>
+            </td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.NPO)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.NPO)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.PayCurrencyTypeID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.PayCurrencyTypeID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SponsoringDealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SponsoringDealerID)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SubAccount)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SubAccount)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TaxExempt)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TaxExempt)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.UseEWalletOnly)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.UseEWalletOnly)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.WebGreeting)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.WebGreeting)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CustomerType)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CustomerType)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CustomerStatus)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CustomerStatus)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.StructureSponsoringDealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.StructureSponsoringDealerID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DealerID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DealerID)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Firstname)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Firstname)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.MiddleInitial)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.MiddleInitial)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.LastName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.LastName)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.BirthDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.BirthDate)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.HomePhone)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.HomePhone)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.FaxPhone)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.FaxPhone)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CellPhone)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CellPhone)
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.CompanyName)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.CompanyName)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.TaxPayerNumber)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.TaxPayerNumber)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Active)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Active)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.AllowWebAccess)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.AllowWebAccess)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.DealerURL)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DealerURL)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.OldID)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.OldID)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Password)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Password)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.IsCustomer)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.IsCustomer)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Token)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Token)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Context)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Context)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.PrimaryEmail)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.PrimaryEmail)
+                </div>
+            </td>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SecondaryEmail)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SecondaryEmail)
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.WorkPhone)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.WorkPhone)
+                </div>
+            </td>
+        </tr>
+        
+    </table>
+    <p>
+        @*@Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |*@
+        @Html.ActionLink("Back", "Index")
+    </p>
+</div>

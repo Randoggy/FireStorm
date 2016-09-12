@@ -1,0 +1,113 @@
+﻿@model FireStorm.Models.DealerBasicInfoDO
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class=" col-sm-12">
+    <div style="margin-left:20px;">
+        <h2>Dealer Information</h2>
+    </div>
+    <div class="">
+        @using (Html.BeginForm("GetDealerDetail", "DealerWS"))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <table class="table">
+                <tr>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.Token)
+                            @Html.TextBoxFor(model => model.Token, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Token)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.Context)
+                            @Html.TextBoxFor(model => model.Context, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Context)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.DealerID)
+                            @Html.TextBoxFor(model => model.DealerID, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.DealerID)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.TaxPayerNumber)
+                            @Html.TextBoxFor(model => model.TaxPayerNumber, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TaxPayerNumber)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.Firstname)
+                            @Html.TextBoxFor(model => model.Firstname, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Firstname)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.LastName)
+                            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.LastName)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.CompanyName)
+                            @Html.TextBoxFor(model => model.CompanyName, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.CompanyName)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.PrimaryEmail)
+                            @Html.TextBoxFor(model => model.PrimaryEmail, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.PrimaryEmail)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.SecondaryEmail)
+                            @Html.TextBoxFor(model => model.SecondaryEmail, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.SecondaryEmail)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.LabelFor(model => model.IsCustomer)
+                            @Html.TextBoxFor(model => model.IsCustomer, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.IsCustomer)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-xs-6">
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-xs-6">
+                            <input type="submit" class="btn btn-default" value="GetDealerDetail" />
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</div>

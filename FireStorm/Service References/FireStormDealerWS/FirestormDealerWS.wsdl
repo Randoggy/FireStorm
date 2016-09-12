@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://trinitysoft.net/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://trinitysoft.net/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://trinitysoft.net/">
+      <s:element name="GetDealerDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecondaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsCustomer" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerDetailExtended">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecondaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaxPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CellPhone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerDetailExtendedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerDetailExtendedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DealerSearch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecondaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DealerSearchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealerSearchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MiddleInitial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipAddress1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipAddress2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShipCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailAddress1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailAddress2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailState" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailZip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MailCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaxPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CellPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecondaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailOptOutUpline" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailOptOutGlobal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailFormatTextOnly" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDealerDetailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerListByDealerIDRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndDealerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerListByDealerIDRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerListByDealerIDRangeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTaxpayerNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DealerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTaxpayerNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateTaxpayerNumberResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DealerLocator">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SourceZipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxDistanceInMiles" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxResults" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StateID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DealerLocatorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DealerLocatorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnpaidCommissions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUnpaidCommissionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUnpaidCommissionsResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerCommissionsByDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerCommissionsByDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerCommissionsByDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerOption">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DealerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User10" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerOptionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDealerOptionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerOptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DealerID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="OptionName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerOptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerOptionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerDetailExtended2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Context" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DealerID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxPayerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrimaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecondaryEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsCustomer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HomePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WorkPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FaxPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CellPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsDealer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsActive" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDealerDetailExtended2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDealerDetailExtended2Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDealerDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerDetailExtendedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerDetailExtended" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerDetailExtendedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerDetailExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="DealerSearchSoapIn">
+    <wsdl:part name="parameters" element="tns:DealerSearch" />
+  </wsdl:message>
+  <wsdl:message name="DealerSearchSoapOut">
+    <wsdl:part name="parameters" element="tns:DealerSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDealerDetail" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDealerDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerListByDealerIDRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerListByDealerIDRange" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerListByDealerIDRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerListByDealerIDRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaxpayerNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTaxpayerNumber" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTaxpayerNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTaxpayerNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="DealerLocatorSoapIn">
+    <wsdl:part name="parameters" element="tns:DealerLocator" />
+  </wsdl:message>
+  <wsdl:message name="DealerLocatorSoapOut">
+    <wsdl:part name="parameters" element="tns:DealerLocatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUnpaidCommissionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUnpaidCommissions" />
+  </wsdl:message>
+  <wsdl:message name="GetUnpaidCommissionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUnpaidCommissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerCommissionsByDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerCommissionsByDate" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerCommissionsByDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerCommissionsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerOptionSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDealerOption" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerOptionSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDealerOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerOptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerOptions" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerOptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerDetailExtended2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetDealerDetailExtended2" />
+  </wsdl:message>
+  <wsdl:message name="GetDealerDetailExtended2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetDealerDetailExtended2Response" />
+  </wsdl:message>
+  <wsdl:portType name="FirestormDealerWSSoap">
+    <wsdl:operation name="GetDealerDetail">
+      <wsdl:input message="tns:GetDealerDetailSoapIn" />
+      <wsdl:output message="tns:GetDealerDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended">
+      <wsdl:input message="tns:GetDealerDetailExtendedSoapIn" />
+      <wsdl:output message="tns:GetDealerDetailExtendedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DealerSearch">
+      <wsdl:input message="tns:DealerSearchSoapIn" />
+      <wsdl:output message="tns:DealerSearchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerDetail">
+      <wsdl:input message="tns:SaveDealerDetailSoapIn" />
+      <wsdl:output message="tns:SaveDealerDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerListByDealerIDRange">
+      <wsdl:input message="tns:GetDealerListByDealerIDRangeSoapIn" />
+      <wsdl:output message="tns:GetDealerListByDealerIDRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaxpayerNumber">
+      <wsdl:input message="tns:UpdateTaxpayerNumberSoapIn" />
+      <wsdl:output message="tns:UpdateTaxpayerNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DealerLocator">
+      <wsdl:input message="tns:DealerLocatorSoapIn" />
+      <wsdl:output message="tns:DealerLocatorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnpaidCommissions">
+      <wsdl:input message="tns:GetUnpaidCommissionsSoapIn" />
+      <wsdl:output message="tns:GetUnpaidCommissionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCommissionsByDate">
+      <wsdl:input message="tns:GetDealerCommissionsByDateSoapIn" />
+      <wsdl:output message="tns:GetDealerCommissionsByDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerOption">
+      <wsdl:input message="tns:SaveDealerOptionSoapIn" />
+      <wsdl:output message="tns:SaveDealerOptionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerOptions">
+      <wsdl:input message="tns:GetDealerOptionsSoapIn" />
+      <wsdl:output message="tns:GetDealerOptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended2">
+      <wsdl:input message="tns:GetDealerDetailExtended2SoapIn" />
+      <wsdl:output message="tns:GetDealerDetailExtended2SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FirestormDealerWSSoap" type="tns:FirestormDealerWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDealerDetail">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerDetailExtended" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DealerSearch">
+      <soap:operation soapAction="http://trinitysoft.net/DealerSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerDetail">
+      <soap:operation soapAction="http://trinitysoft.net/SaveDealerDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerListByDealerIDRange">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerListByDealerIDRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaxpayerNumber">
+      <soap:operation soapAction="http://trinitysoft.net/UpdateTaxpayerNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DealerLocator">
+      <soap:operation soapAction="http://trinitysoft.net/DealerLocator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnpaidCommissions">
+      <soap:operation soapAction="http://trinitysoft.net/GetUnpaidCommissions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCommissionsByDate">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerCommissionsByDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerOption">
+      <soap:operation soapAction="http://trinitysoft.net/SaveDealerOption" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerOptions">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerOptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended2">
+      <soap:operation soapAction="http://trinitysoft.net/GetDealerDetailExtended2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="FirestormDealerWSSoap12" type="tns:FirestormDealerWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDealerDetail">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerDetailExtended" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DealerSearch">
+      <soap12:operation soapAction="http://trinitysoft.net/DealerSearch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerDetail">
+      <soap12:operation soapAction="http://trinitysoft.net/SaveDealerDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerListByDealerIDRange">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerListByDealerIDRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTaxpayerNumber">
+      <soap12:operation soapAction="http://trinitysoft.net/UpdateTaxpayerNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DealerLocator">
+      <soap12:operation soapAction="http://trinitysoft.net/DealerLocator" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnpaidCommissions">
+      <soap12:operation soapAction="http://trinitysoft.net/GetUnpaidCommissions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerCommissionsByDate">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerCommissionsByDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerOption">
+      <soap12:operation soapAction="http://trinitysoft.net/SaveDealerOption" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerOptions">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerOptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerDetailExtended2">
+      <soap12:operation soapAction="http://trinitysoft.net/GetDealerDetailExtended2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FirestormDealerWS">
+    <wsdl:port name="FirestormDealerWSSoap" binding="tns:FirestormDealerWSSoap">
+      <soap:address location="http://www.firestormwebservices.com/FirestormWebServices/FirestormDealerWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="FirestormDealerWSSoap12" binding="tns:FirestormDealerWSSoap12">
+      <soap12:address location="http://www.firestormwebservices.com/FirestormWebServices/FirestormDealerWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
